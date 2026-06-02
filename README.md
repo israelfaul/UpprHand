@@ -1,42 +1,34 @@
 # UpprHand
 
-UpprHand is a boxing analytics platform that predicts the probability of one boxer defeating another using historical fight data, opponent quality metrics, and machine learning.
+UpprHand is a boxing analytics platform that predicts fight outcomes using fighter statistics, opponent quality metrics, and an Elo-inspired rating system.
 
 ## Features
 
-- Fighter database
-- Historical fight records
+- FastAPI backend
+- React frontend
+- Elo-inspired prediction engine
 - Opponent quality scoring
-- Weight-class specific rankings
-- Matchup win probability predictions
-- Visualization dashboard
+- Explainable matchup analysis
+- Interactive fighter selection
+
+## Current Fighters
+
+- Jaron Ennis
+- Xander Zayas
+- Sebastian Fundora
 
 ## Tech Stack
 
-Frontend:
-- Next.js
-- React
-
 Backend:
-- FastAPI
-- PostgreSQL
-
-Machine Learning:
 - Python
-- Scikit-Learn
-- XGBoost
+- FastAPI
 
-## Roadmap
+Frontend:
+- React
+- Vite
 
-Phase 1:
-- Fighter database
-- Fight database
+Data:
+- JSON
 
-Phase 2:
-- Opponent Quality Score
-
-Phase 3:
-- Prediction engine
-
-Phase 4:
-- Web application
+Version Control:
+- Git / GitHub
