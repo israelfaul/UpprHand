@@ -1,64 +1,50 @@
 from scoring import build_scores
 
-WEIGHTS = {
-    "opponent_quality": 0.30,
-    "punch_efficiency": 0.20,
-    "recent_form": 0.15,
-    "power": 0.15,
-    "weight_class_fit": 0.10,
-    "pedigree": 0.05,
-    "age_prime": 0.05,
+BASE_RATING = 1000
+
+CATEGORY_WEIGHTS = {
+    "opponent_quality": 1.8,
+    "punch_efficiency": 1.5,
+    "recent_form": 1.3,
+    "power": 1.2,
+    "weight_class_fit": 0.9,
+    "pedigree": 0.7,
+    "age_prime": 0.6,
 }
 
+CATEGORY_BASELINE = 70
 
-def calculate_score(fighter):
+
+def calculate_rating(fighter):
     scores = build_scores(fighter)
-    total = 0
+    rating = BASE_RATING
 
-    for category, weight in WEIGHTS.items():
-        total += scores[category] * weight
+    for category, weight in CATEGORY_WEIGHTS.items():
+        rating += (scores[category] - CATEGORY_BASELINE) * weight
 
-    return total
-
-
-WEIGHTS = {
-    "opponent_quality": 0.30,
-    "punch_efficiency": 0.20,
-    "recent_form": 0.15,
-    "power": 0.15,
-    "weight_class_fit": 0.10,
-    "pedigree": 0.05,
-    "age_prime": 0.05,
-}
+    return round(rating, 2)
 
 
-def calculate_score(fighter):
-    total = 0
+def calculate_probability(rating_a, rating_b):
+    probability_a = 1 / (1 + 10 ** ((rating_b - rating_a) / 400))
+    probability_b = 1 - probability_a
 
-    for category, weight in WEIGHTS.items():
-        total += fighter["scores"][category] * weight
-
-    return total
+    return round(probability_a * 100, 1), round(probability_b * 100, 1)
 
 
 def compare_categories(fighter_a, fighter_b):
+    scores_a = build_scores(fighter_a)
+    scores_b = build_scores(fighter_b)
+
     advantages_a = []
     advantages_b = []
 
-    for category in WEIGHTS:
-        
-        
-        scores_a = build_scores(fighter_a)
-        scores_b = build_scores(fighter_b)
+    for category in CATEGORY_WEIGHTS:
+        difference = round(abs(scores_a[category] - scores_b[category]), 1)
 
-        score_a = scores_a[category]
-        score_b = scores_b[category]
-
-        difference = round(abs(score_a - score_b), 1)
-
-        if score_a > score_b:
+        if scores_a[category] > scores_b[category]:
             advantages_a.append((category, difference))
-        elif score_b > score_a:
+        elif scores_b[category] > scores_a[category]:
             advantages_b.append((category, difference))
 
     advantages_a.sort(key=lambda x: x[1], reverse=True)
@@ -68,18 +54,12 @@ def compare_categories(fighter_a, fighter_b):
 
 
 def predict_matchup(fighter_a, fighter_b):
-    score_a = calculate_score(fighter_a)
-    score_b = calculate_score(fighter_b)
+    rating_a = calculate_rating(fighter_a)
+    rating_b = calculate_rating(fighter_b)
 
-    total_score = score_a + score_b
+    probability_a, probability_b = calculate_probability(rating_a, rating_b)
 
-    probability_a = round((score_a / total_score) * 100, 1)
-    probability_b = round((score_b / total_score) * 100, 1)
-
-    advantages_a, advantages_b = compare_categories(
-        fighter_a,
-        fighter_b
-    )
+    advantages_a, advantages_b = compare_categories(fighter_a, fighter_b)
 
     return {
         "probabilities": {
@@ -87,8 +67,8 @@ def predict_matchup(fighter_a, fighter_b):
             fighter_b["name"]: probability_b
         },
         "raw_scores": {
-            fighter_a["name"]: round(score_a, 2),
-            fighter_b["name"]: round(score_b, 2)
+            fighter_a["name"]: rating_a,
+            fighter_b["name"]: rating_b
         },
         "advantages": {
             fighter_a["name"]: advantages_a,

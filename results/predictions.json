@@ -34,5 +34,257 @@
                 ]
             }
         }
+    },
+    {
+        "fighter_a": "Jaron Ennis",
+        "fighter_b": "Xander Zayas",
+        "prediction": {
+            "probabilities": {
+                "Jaron Ennis": 50.9,
+                "Xander Zayas": 49.1
+            },
+            "raw_scores": {
+                "Jaron Ennis": 42.85,
+                "Xander Zayas": 41.4
+            },
+            "advantages": {
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ],
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Jaron Ennis",
+        "fighter_b": "Xander Zayas",
+        "prediction": {
+            "probabilities": {
+                "Jaron Ennis": 50.9,
+                "Xander Zayas": 49.1
+            },
+            "raw_scores": {
+                "Jaron Ennis": 42.85,
+                "Xander Zayas": 41.4
+            },
+            "advantages": {
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ],
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Jaron Ennis",
+        "fighter_b": "Xander Zayas",
+        "prediction": {
+            "probabilities": {
+                "Jaron Ennis": 50.9,
+                "Xander Zayas": 49.1
+            },
+            "raw_scores": {
+                "Jaron Ennis": 42.85,
+                "Xander Zayas": 41.4
+            },
+            "advantages": {
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ],
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Xander Zayas",
+        "fighter_b": "Jaron Ennis",
+        "prediction": {
+            "probabilities": {
+                "Xander Zayas": 49.1,
+                "Jaron Ennis": 50.9
+            },
+            "raw_scores": {
+                "Xander Zayas": 41.4,
+                "Jaron Ennis": 42.85
+            },
+            "advantages": {
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ],
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Xander Zayas",
+        "fighter_b": "Jaron Ennis",
+        "prediction": {
+            "probabilities": {
+                "Xander Zayas": 49.1,
+                "Jaron Ennis": 50.9
+            },
+            "raw_scores": {
+                "Xander Zayas": 41.4,
+                "Jaron Ennis": 42.85
+            },
+            "advantages": {
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ],
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Jaron Ennis",
+        "fighter_b": "Xander Zayas",
+        "prediction": {
+            "probabilities": {
+                "Jaron Ennis": 50.9,
+                "Xander Zayas": 49.1
+            },
+            "raw_scores": {
+                "Jaron Ennis": 42.85,
+                "Xander Zayas": 41.4
+            },
+            "advantages": {
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ],
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "fighter_a": "Jaron Ennis",
+        "fighter_b": "Xander Zayas",
+        "prediction": {
+            "probabilities": {
+                "Jaron Ennis": 50.9,
+                "Xander Zayas": 49.1
+            },
+            "raw_scores": {
+                "Jaron Ennis": 42.85,
+                "Xander Zayas": 41.4
+            },
+            "advantages": {
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ],
+                    [
+                        "pedigree",
+                        8
+                    ]
+                ],
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ]
+            }
+        }
     }
 ]

@@ -1,5 +1,6 @@
 import json
 from predictor import predict_matchup
+from scoring import build_scores
 
 
 def load_fighters():
@@ -26,40 +27,20 @@ def display_fighters(fighters):
     for fighter in fighters:
         print(f"- {fighter['name']}")
 
-def save_prediction(prediction, fighter_a, fighter_b):
-    result = {
-        "fighter_a": fighter_a["name"],
-        "fighter_b": fighter_b["name"],
-        "prediction": prediction
-    }
 
-    with open("results/predictions.json", "r", encoding="utf-8") as file:
-        predictions = json.load(file)
+def print_category_scores(fighter_a, fighter_b):
+    print("\nCalculated Category Scores")
+    print("--------------------------")
 
-    predictions.append(result)
+    for fighter in [fighter_a, fighter_b]:
+        print(f"\n{fighter['name']}")
+        scores = build_scores(fighter)
 
-    with open("results/predictions.json", "w", encoding="utf-8") as file:
-        json.dump(predictions, file, indent=4)
+        for category, score in scores.items():
+            print(f"{category}: {score}")
 
-def main():
-    fighters = load_fighters()
 
-    display_fighters(fighters)
-
-    fighter_a_name = input("\nEnter first fighter: ")
-    fighter_b_name = input("Enter second fighter: ")
-
-    fighter_a = find_fighter(fighters, fighter_a_name)
-    fighter_b = find_fighter(fighters, fighter_b_name)
-
-    if fighter_a is None or fighter_b is None:
-        print("\nError: One or both fighters were not found.")
-        return
-
-    prediction = predict_matchup(fighter_a, fighter_b)
-    
-    save_prediction(prediction, fighter_a, fighter_b)
-
+def print_prediction(prediction):
     print("\nUpprHand Prediction")
     print("-------------------\n")
 
@@ -88,6 +69,27 @@ def main():
             print(f"  + {category} (+{diff})")
 
         print()
+
+
+def main():
+    fighters = load_fighters()
+
+    display_fighters(fighters)
+
+    fighter_a_name = input("\nEnter first fighter: ")
+    fighter_b_name = input("Enter second fighter: ")
+
+    fighter_a = find_fighter(fighters, fighter_a_name)
+    fighter_b = find_fighter(fighters, fighter_b_name)
+
+    if fighter_a is None or fighter_b is None:
+        print("\nError: One or both fighters were not found.")
+        return
+
+    prediction = predict_matchup(fighter_a, fighter_b)
+
+    print_category_scores(fighter_a, fighter_b)
+    print_prediction(prediction)
 
 
 if __name__ == "__main__":
