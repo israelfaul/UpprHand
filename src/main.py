@@ -16,15 +16,24 @@ def main():
     prediction = predict_matchup(fighter_a, fighter_b)
 
     print("\nUpprHand Prediction")
-    print("-------------------")
+    print("-------------------\n")
 
-    for fighter, probability in prediction.items():
-        if fighter != "raw_scores":
-            print(f"{fighter}: {probability}%")
+    for fighter, probability in prediction["probabilities"].items():
+        print(f"{fighter}: {probability}%")
 
     print("\nRaw Scores:")
     for fighter, score in prediction["raw_scores"].items():
         print(f"{fighter}: {score}")
+
+    print("\nBiggest Advantages\n")
+
+    for fighter, advantages in prediction["advantages"].items():
+        print(f"{fighter}")
+
+        for category, diff in advantages:
+            print(f"  + {category} (+{diff})")
+
+        print()
 
 
 if __name__ == "__main__":
