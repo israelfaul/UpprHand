@@ -21,6 +21,15 @@ def main():
     for fighter, probability in prediction["probabilities"].items():
         print(f"{fighter}: {probability}%")
 
+    winner = max(
+        prediction["probabilities"],
+        key=prediction["probabilities"].get
+    )
+
+    winner_probability = prediction["probabilities"][winner]
+
+    print(f"\nProjected Edge: {winner} with {winner_probability}%")
+
     print("\nRaw Scores:")
     for fighter, score in prediction["raw_scores"].items():
         print(f"{fighter}: {score}")
