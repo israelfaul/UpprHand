@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Xander Zayas",
+    "record": "23-0",
+    "wins": 23,
+    "losses": 0,
+    "kos": 13,
+    "scores": {
+      "opponent_quality": 75,
+      "punch_efficiency": 78,
+      "recent_form": 86,
+      "power": 72,
+      "weight_class_fit": 92,
+      "pedigree": 74,
+      "age_prime": 90
+    }
+  },
+  {
+    "name": "Jaron Ennis",
+    "record": "35-0",
+    "wins": 35,
+    "losses": 0,
+    "kos": 31,
+    "scores": {
+      "opponent_quality": 86,
+      "punch_efficiency": 88,
+      "recent_form": 89,
+      "power": 94,
+      "weight_class_fit": 78,
+      "pedigree": 82,
+      "age_prime": 86
+    }
+  }
+]
