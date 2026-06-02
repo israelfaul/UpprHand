@@ -7,11 +7,40 @@ def load_fighters():
         return json.load(file)
 
 
+def find_fighter(fighters, name):
+    name = name.lower().strip()
+
+    for fighter in fighters:
+        fighter_name = fighter["name"].lower()
+
+        if name == fighter_name or name in fighter_name:
+            return fighter
+
+    return None
+
+
+def display_fighters(fighters):
+    print("\nAvailable Fighters")
+    print("------------------")
+
+    for fighter in fighters:
+        print(f"- {fighter['name']}")
+
+
 def main():
     fighters = load_fighters()
 
-    fighter_a = fighters[0]
-    fighter_b = fighters[1]
+    display_fighters(fighters)
+
+    fighter_a_name = input("\nEnter first fighter: ")
+    fighter_b_name = input("Enter second fighter: ")
+
+    fighter_a = find_fighter(fighters, fighter_a_name)
+    fighter_b = find_fighter(fighters, fighter_b_name)
+
+    if fighter_a is None or fighter_b is None:
+        print("\nError: One or both fighters were not found.")
+        return
 
     prediction = predict_matchup(fighter_a, fighter_b)
 
