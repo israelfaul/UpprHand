@@ -26,6 +26,20 @@ def display_fighters(fighters):
     for fighter in fighters:
         print(f"- {fighter['name']}")
 
+def save_prediction(prediction, fighter_a, fighter_b):
+    result = {
+        "fighter_a": fighter_a["name"],
+        "fighter_b": fighter_b["name"],
+        "prediction": prediction
+    }
+
+    with open("results/predictions.json", "r", encoding="utf-8") as file:
+        predictions = json.load(file)
+
+    predictions.append(result)
+
+    with open("results/predictions.json", "w", encoding="utf-8") as file:
+        json.dump(predictions, file, indent=4)
 
 def main():
     fighters = load_fighters()
@@ -43,6 +57,8 @@ def main():
         return
 
     prediction = predict_matchup(fighter_a, fighter_b)
+    
+    save_prediction(prediction, fighter_a, fighter_b)
 
     print("\nUpprHand Prediction")
     print("-------------------\n")

@@ -1,0 +1,38 @@
+[
+    {
+        "fighter_a": "Xander Zayas",
+        "fighter_b": "Jaron Ennis",
+        "prediction": {
+            "probabilities": {
+                "Xander Zayas": 48.4,
+                "Jaron Ennis": 51.6
+            },
+            "raw_scores": {
+                "Xander Zayas": 68.4,
+                "Jaron Ennis": 72.95
+            },
+            "advantages": {
+                "Xander Zayas": [
+                    [
+                        "weight_class_fit",
+                        14
+                    ]
+                ],
+                "Jaron Ennis": [
+                    [
+                        "power",
+                        32.1
+                    ],
+                    [
+                        "opponent_quality",
+                        11
+                    ],
+                    [
+                        "punch_efficiency",
+                        10
+                    ]
+                ]
+            }
+        }
+    }
+]
