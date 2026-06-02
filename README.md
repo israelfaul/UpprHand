@@ -1,4 +1,4 @@
-# UpperHand
+# UpprHand
 
 UpprHand is a boxing analytics platform that predicts the probability of one boxer defeating another using historical fight data, opponent quality metrics, and machine learning.
 
