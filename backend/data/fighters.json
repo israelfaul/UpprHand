@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Xander Zayas",
+    "record": "23-0",
+    "wins": 23,
+    "losses": 0,
+    "draws": 0,
+    "kos": 13,
+    "age": 23,
+    "height_in": 70,
+    "reach_in": 74,
+    "stance": "Orthodox",
+    "weight_class": "Junior Middleweight",
+    "opponents": [
+      {
+        "name": "Jorge Garcia Perez",
+        "wins": 33,
+        "losses": 4,
+        "draws": 0,
+        "kos": 26,
+        "ranked": true,
+        "former_champion": false
+      },
+      {
+        "name": "Patrick Teixeira",
+        "wins": 34,
+        "losses": 4,
+        "draws": 0,
+        "kos": 25,
+        "ranked": false,
+        "former_champion": true
+      },
+      {
+        "name": "Damian Sosa",
+        "wins": 25,
+        "losses": 2,
+        "draws": 0,
+        "kos": 12,
+        "ranked": false,
+        "former_champion": false
+      }
+    ],
+    "scores": {
+      "opponent_quality": 0,
+      "punch_efficiency": 78,
+      "recent_form": 86,
+      "power": 0,
+      "weight_class_fit": 92,
+      "pedigree": 74,
+      "age_prime": 0
+    }
+  },
+  {
+    "name": "Jaron Ennis",
+    "record": "35-0",
+    "wins": 35,
+    "losses": 0,
+    "draws": 0,
+    "kos": 31,
+    "age": 28,
+    "height_in": 70,
+    "reach_in": 74,
+    "stance": "Orthodox",
+    "weight_class": "Welterweight / Junior Middleweight",
+    "opponents": [
+      {
+        "name": "Eimantas Stanionis",
+        "wins": 15,
+        "losses": 0,
+        "draws": 0,
+        "kos": 9,
+        "ranked": true,
+        "former_champion": true
+      },
+      {
+        "name": "Karen Chukhadzhian",
+        "wins": 24,
+        "losses": 2,
+        "draws": 0,
+        "kos": 13,
+        "ranked": true,
+        "former_champion": false
+      },
+      {
+        "name": "David Avanesyan",
+        "wins": 30,
+        "losses": 4,
+        "draws": 1,
+        "kos": 18,
+        "ranked": false,
+        "former_champion": true
+      }
+    ],
+    "scores": {
+      "opponent_quality": 0,
+      "punch_efficiency": 88,
+      "recent_form": 89,
+      "power": 0,
+      "weight_class_fit": 78,
+      "pedigree": 82,
+      "age_prime": 0
+    }
+  },
+  {
+    "name": "Sebastian Fundora",
+    "record": "24-1-1",
+    "wins": 24,
+    "losses": 1,
+    "draws": 1,
+    "kos": 16,
+    "age": 28,
+    "height_in": 77.5,
+    "reach_in": 80,
+    "stance": "Southpaw",
+    "weight_class": "Junior Middleweight",
+    "opponents": [
+      {
+        "name": "Tim Tszyu",
+        "wins": 27,
+        "losses": 3,
+        "draws": 0,
+        "kos": 18,
+        "ranked": true,
+        "former_champion": true
+      },
+      {
+        "name": "Chordale Booker",
+        "wins": 23,
+        "losses": 1,
+        "draws": 0,
+        "kos": 11,
+        "ranked": true,
+        "former_champion": false
+      },
+      {
+        "name": "Erickson Lubin",
+        "wins": 27,
+        "losses": 3,
+        "draws": 0,
+        "kos": 18,
+        "ranked": true,
+        "former_champion": false
+      }
+    ],
+    "scores": {
+      "opponent_quality": 0,
+      "punch_efficiency": 82,
+      "recent_form": 92,
+      "power": 0,
+      "weight_class_fit": 95,
+      "pedigree": 78,
+      "age_prime": 0
+    }
+  }
+]

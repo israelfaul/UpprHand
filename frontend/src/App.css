@@ -1,0 +1,96 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+p {
+  color: #777;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0;
+}
+
+select,
+button {
+  padding: 12px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.results {
+  margin-top: 32px;
+}
+
+.results h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.fighter-result {
+  margin-bottom: 24px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.bar {
+  height: 24px;
+  background: #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: #111;
+}
+
+.advantages {
+  margin-top: 40px;
+}
+
+.advantages h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.advantage-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.advantage-card h3 {
+  margin-top: 0;
+}
+
+.advantage-card ul {
+  margin-bottom: 0;
+}
+
+.advantage-card li {
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
